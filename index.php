@@ -10,17 +10,11 @@
             'html' => function($tag) {
 
                 $tmdbid = $tag->tmdb;
-                // return "Dingen ophalen voor ". $filmtitel;
-
                 $api_key = option('themoviedb.apiKey');
                
                 $url = "https://api.themoviedb.org/3/movie/". $tmdbid ."?api_key=" . $api_key;
-                // $headers = array(
-                //     'x-api-key: '.$api_key, 
-                //     'Accept: application/json');
                 $ch = curl_init($url);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                // curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
                 $rawdata = curl_exec($ch);
                 curl_close($ch);
                 
