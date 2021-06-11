@@ -11,7 +11,9 @@ git submodule add https://github.com/mirthe/kirby_movieblock site/plugins/movieb
 
 ## Usage
 
-You'll need an API key for this from https://developers.themoviedb.org/3/getting-started/authentication
+You'll need an API key for this from 
+https://developers.themoviedb.org/3/getting-started/authentication
+
 Add the following to your config where XX is your key:
 
     'themoviedb.apiKey' => 'XX'
