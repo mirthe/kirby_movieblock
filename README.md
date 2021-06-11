@@ -24,7 +24,7 @@ Placed for example with
 
     (movie: tmdb: 577922)
 
-![Example of plugin in use](image: https://github.com/mirthe/kirby_movieblock/blob/9769099779996c7b40c8beda97eebd5d1ebee1e4/example.png)
+<img src="https://github.com/mirthe/kirby_movieblock/blob/9769099779996c7b40c8beda97eebd5d1ebee1e4/example.png" alt="Example of usage">
 
 ## Todo
 
