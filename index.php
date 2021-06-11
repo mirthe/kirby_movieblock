@@ -1,23 +1,4 @@
-<?php
-
-// TODO opschonen en aanbieden?
-// https://getkirby.com/docs/guide/plugins/best-practices
-
-// TODO Aparte git repo of submodule van maken?
-
-// http://api-docs.letterboxd.com/
-// https://developers.themoviedb.org/3
-
-// API-sleutel (v3 auth)
-// f630ae6c009226f720e4f77d256d35fe
-
-// Voorbeeld API-aanvraag
-// https://api.themoviedb.org/3/movie/337404?api_key=f630ae6c009226f720e4f77d256d35fe
-
-// API-leestoegangstoken (v4 auth)
-// eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmNjMwYWU2YzAwOTIyNmY3MjBlNGY3N2QyNTZkMzVmZSIsInN1YiI6IjYwYzMyYTZkMmM2YjdiMDA0MTg3YjEyOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.cx-0h0R7jmNMGDKTDSquU4_3RkOIDf6au61Kvtv3u8A
-
-Kirby::plugin('mirthe/movieblock', [
+<?php Kirby::plugin('mirthe/movieblock', [
     'options' => [
         'cache' => true
     ],
