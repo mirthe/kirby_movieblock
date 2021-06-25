@@ -22,7 +22,7 @@ Add the following to your config where XX is your key:
 
 Placed for example with 
 
-    (movie: tmdb: 577922)
+    (movieblock: tmdb: 577922)
 
 <img src="https://github.com/mirthe/kirby_movieblock/blob/9769099779996c7b40c8beda97eebd5d1ebee1e4/example.png" alt="Example of usage">
 
