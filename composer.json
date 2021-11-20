@@ -1,0 +1,14 @@
+{
+    "name": "mirthe/movieblock",
+    "description": "Shows movie info from TheMovieDB API based on tmdb ID",
+    "homepage": "https://github.com/mirthe/kirby_movieblock",
+    "keywords": ["kirby-plugin", "TheMovieDB", "movies", "tmdb"],
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mirthe Valentijn",
+            "email": "me@Mirthe.org"
+        }
+    ]
+}
