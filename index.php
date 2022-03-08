@@ -27,12 +27,13 @@
                 curl_close($ch);
                 $credits = json_decode($rawdata_credits,true);
                 
-                $mijnoutput = '<div class="well" style="overflow: auto;">';
-                $mijnoutput .= '<img src="https://www.themoviedb.org/t/p/w200/'.$movieinfo['poster_path'].'" alt="" class="floatleft" style="margin-right: 1rem;">';
-                $mijnoutput .= '<a href="https://www.imdb.com/title/'.$movieinfo['imdb_id'].'" class="floatright" title="Bekijken op IMDb">IMDb</a>';
+                $mijnoutput = '<div class="well">';
+                $mijnoutput .= '<div class="well-img"><img src="https://www.themoviedb.org/t/p/w200/'.$movieinfo['poster_path'].'" alt="" class="img" width="200" height="300"></div>';
+                $mijnoutput .= '<div class="well-body">';
+                // $mijnoutput .= '<a href="https://www.imdb.com/title/'.$movieinfo['imdb_id'].'" class="floatright" title="Bekijken op IMDb">IMDb</a>';
                 $mijnoutput .= '<p><a href="https://www.themoviedb.org/movie/'.$movieinfo['id'].'">'.$movieinfo['original_title']."</a><br>". $movieinfo['release_date']."</p>";
                 $mijnoutput .= '<p><em>'.$movieinfo['tagline']."</em></p>";
-                $mijnoutput .= '<p>'.$movieinfo['overview']."</p>";
+                $mijnoutput .= '<p>'.mb_strimwidth($movieinfo['overview'],0,300, '&#8230;')."</p>";
 
                 $i = 0;
                 $mijnoutput .= "<ul class=\"cast\">";
@@ -48,7 +49,7 @@
                 }
                 $mijnoutput .= "</ul>";
 
-                $mijnoutput .= '</div>';
+                $mijnoutput .= '</div></div>';
                
                 return $mijnoutput;
             }

@@ -26,6 +26,10 @@ Placed for example with
 
 <img src="https://github.com/mirthe/kirby_movieblock/blob/9769099779996c7b40c8beda97eebd5d1ebee1e4/example.png" alt="Example of usage">
 
+## Example CSS
+
+See https://css-tricks.com/how-to-make-a-media-query-less-card-component/
+
 ## Todo
 
 - Offer as an official Kirby plugin
