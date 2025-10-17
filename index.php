@@ -8,14 +8,14 @@
                 'tmdb'
             ],
             'html' => function($tag) {
-
+                
                 $tmdbid = $tag->tmdb;
                 $api_key = option('themoviedb.apiKey');
                
                 $url = "https://api.themoviedb.org/3/movie/". $tmdbid ."?api_key=" . $api_key;
                 $ch = curl_init($url);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                curl_setopt($ch, CURLOPT_USERAGENT, $site->title());
+                curl_setopt($ch, CURLOPT_USERAGENT, kirby()->site()->title());
                 $rawdata = curl_exec($ch);
                 curl_close($ch);
                 $movieinfo = json_decode($rawdata,true);
@@ -24,7 +24,7 @@
                 $url = "https://api.themoviedb.org/3/movie/". $tmdbid ."/credits?api_key=" . $api_key;
                 $ch = curl_init($url);
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                curl_setopt($ch, CURLOPT_USERAGENT, $site->title());
+                curl_setopt($ch, CURLOPT_USERAGENT, kirby()->site()->title());
                 $rawdata_credits = curl_exec($ch);
                 curl_close($ch);
                 $credits = json_decode($rawdata_credits,true);
