@@ -1,6 +1,6 @@
 {
     "name": "mirthe/kirby_movieblock",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Shows movie info from TheMovieDB API based on tmdb ID",
     "homepage": "https://github.com/mirthe/kirby_movieblock",
     "keywords": ["kirby-plugin", "TheMovieDB", "movies", "tmdb"],
