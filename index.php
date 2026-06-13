@@ -2,6 +2,14 @@
     'options' => [
         'cache' => true
     ],
+    'translations' => [
+        'nl' => [
+            'mirthe.movieblock.not-found' => 'Film niet gevonden'
+        ],
+        'en' => [
+            'mirthe.movieblock.not-found' => 'Film not found'
+        ]
+    ],
     'tags' => [
         'movieblock' => [
             'attr' =>[
@@ -42,13 +50,13 @@
                 $credits = $movieData['credits'] ?? null;
 
                 if (empty($movieinfo) || !is_array($movieinfo) || isset($movieinfo['status_code'])) {
-                    return '<div class="well"><div class="well-body">Film niet gevonden</div></div>';
+                    return '<div class="well"><div class="well-body">'.t('mirthe.movieblock.not-found').'</div></div>';
                 }
 
                 $poster = isset($movieinfo['poster_path']) ? 'https://www.themoviedb.org/t/p/w200/'.$movieinfo['poster_path'] : '';
                 $mijnoutput = '<div class="well">';
                 if ($poster !== '') {
-                    $mijnoutput .= '<div class="well-img"><img src="'.$poster.'" alt="" class="img" width="200" height="300"></div>';
+                    $mijnoutput .= '<div class="well-img"><a href="https://www.themoviedb.org/movie/'.$movieinfo['id'].'"><img src="'.$poster.'" alt="" class="img" width="200" height="300"></a></div>';
                 }
                 $mijnoutput .= '<div class="well-body">';
                 $mijnoutput .= '<p><a href="https://www.themoviedb.org/movie/'.$movieinfo['id'].'">'.($movieinfo['original_title'] ?? '')."</a><br>".($movieinfo['release_date'] ?? '')."</p>";
