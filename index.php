@@ -50,6 +50,18 @@
                 $credits = $movieData['credits'] ?? null;
 
                 if (empty($movieinfo) || !is_array($movieinfo) || isset($movieinfo['status_code'])) {
+                    if (function_exists('errorMonitorLog')) {
+                        $failureReason = $movieinfo['status_message'] ?? 'TMDB returned no movie data.';
+                        if (isset($movieinfo['status_code'])) {
+                            $failureReason .= ' (TMDB status ' . $movieinfo['status_code'] . ')';
+                        }
+                        errorMonitorLog(
+                            'MOVIEBLOCK',
+                            'TMDB lookup failed for movie ID ' . $tmdbid . ': ' . $failureReason,
+                            __FILE__,
+                            __LINE__
+                        );
+                    }
                     return '<div class="well"><div class="well-body">'.t('mirthe.movieblock.not-found').'</div></div>';
                 }
 
