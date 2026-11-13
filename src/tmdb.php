@@ -48,7 +48,7 @@ if (!function_exists('mirthe_movieblock_fetch')) {
             ];
         }
 
-        $apiKey = option('themoviedb.apiKey');
+        $apiKey = option('mirthe.movieblock.apiKey');
         $baseUrl = 'https://api.themoviedb.org/3/movie/' . $tmdbid;
         $movieResponse = mirthe_movieblock_request($baseUrl . '?api_key=' . $apiKey);
         $creditsResponse = mirthe_movieblock_request($baseUrl . '/credits?api_key=' . $apiKey);
