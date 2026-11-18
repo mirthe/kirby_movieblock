@@ -30,6 +30,7 @@ if (!function_exists('mirthe_movieblock_render')) {
             $output .= '<div class="well-img"><a href="https://www.themoviedb.org/movie/' . $movieInfo['id'] . '"><img src="' . $poster . '" alt="" class="img" width="200" height="300"></a></div>';
         }
         $output .= '<div class="well-body">';
+        $output .= '<i class="blockico fa-solid fa-film"></i>';
         $output .= '<p><a href="https://www.themoviedb.org/movie/' . $movieInfo['id'] . '">' . ($movieInfo['original_title'] ?? '') . '</a><br>' . ($movieInfo['release_date'] ?? '') . '</p>';
         $output .= '<p><em>' . ($movieInfo['tagline'] ?? '') . '</em></p>';
         $output .= '<p>' . mb_strimwidth($movieInfo['overview'] ?? '', 0, 300, '&#8230;') . '</p>';
